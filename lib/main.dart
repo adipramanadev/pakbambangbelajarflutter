@@ -62,7 +62,16 @@ class _DashBoardState extends State<DashBoard> {
             List<dynamic> dataBarang = snapshot.data;
             return ListView.builder(
               itemCount: dataBarang.length,
-              itemBuilder: (context, index) {},
+              itemBuilder: (context, index) {
+                return Container(
+                    child: Card(
+                  child: ListTile(
+                    title: Text(
+                      dataBarang[index]['nameproduct'],
+                    ),
+                  ),
+                ));
+              },
             );
           }
         },
